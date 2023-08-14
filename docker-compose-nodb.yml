@@ -3,6 +3,7 @@ services:
   web:
     container_name: ${APP_NAME}
     image: trafex/php-nginx
+    restart: unless-stopped
     ports:
       - ${APP_DOCK_PORT}:8080
     volumes:
